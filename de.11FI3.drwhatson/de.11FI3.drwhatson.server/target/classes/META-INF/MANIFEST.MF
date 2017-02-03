@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: de.11FI3.drwhatson.server
+Implementation-Version: 
+Built-By: Chrissi
+Implementation-Vendor-Id: de.11FI3.drwhatson.server
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/de.11FI3.drw
+ hatson/de.11FI3.drwhatson.server/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
