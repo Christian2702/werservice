@@ -5,6 +5,15 @@
     <artifactId>de.11FI3.drwhatson</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  
+  <packaging>pom</packaging>
+  
   <groupId>de.11FI3.drwhatson.server</groupId>
   <artifactId>de.11FI3.drwhatson.server</artifactId>
+  <modules>
+  	<module>de.11FI3.drwhatson.server.main</module>
+  	<module>de.11FI3.drwhatson.server.rest</module>
+  	<module>de.11FI3.drwhatson.server.dao</module>
+  	<module>de.11FI3.drwhatson.server.business</module>
+  </modules>
 </project>
