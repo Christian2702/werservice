@@ -12,8 +12,5 @@ elapsed = timeit.default_timer()-start
 print "TIME ELAPSED:", elapsed
 
 
-cur.execute("Select * from hotel")
-print cur.rowcount  # output rowcount
-
 cur.close()
 conn.close()
