@@ -6,4 +6,5 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>de.11FI3.drwhatson.server.api</artifactId>
+  
 </project>
