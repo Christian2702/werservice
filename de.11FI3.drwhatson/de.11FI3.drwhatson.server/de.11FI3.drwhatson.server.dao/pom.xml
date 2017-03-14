@@ -13,6 +13,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>de.11FI3.drwhatson.server</groupId>
+			<artifactId>de.11FI3.drwhatson.server.api</artifactId>
+		</dependency>
 	</dependencies>
 
 </project>
