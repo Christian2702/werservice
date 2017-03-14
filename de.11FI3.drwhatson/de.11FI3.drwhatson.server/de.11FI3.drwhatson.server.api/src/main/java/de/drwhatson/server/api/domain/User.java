@@ -4,15 +4,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-public class UserEntity {
+public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	private String userName;
-	
-	private String password;
 	
 	public Long getId() {
 		return id;
@@ -25,12 +23,6 @@ public class UserEntity {
 	}
 	public void setUserName(String userName) {
 		this.userName = userName;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
 	}
 
 }
