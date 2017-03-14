@@ -17,6 +17,11 @@
 			<groupId>de.11FI3.drwhatson.server</groupId>
 			<artifactId>de.11FI3.drwhatson.server.api</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+		</dependency>
+
 	</dependencies>
 
 </project>
