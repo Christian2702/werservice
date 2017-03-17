@@ -15,7 +15,7 @@
 		</dependency>
 		<dependency>
 			<groupId>de.11FI3.drwhatson.server</groupId>
-			<artifactId>de.11FI3.drwhatson.server.rest</artifactId>
+			<artifactId>de.11FI3.drwhatson.server.web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>de.11FI3.drwhatson.server</groupId>
