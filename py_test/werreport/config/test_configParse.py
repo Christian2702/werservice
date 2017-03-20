@@ -8,6 +8,10 @@ class TestConfigParse(unittest.TestCase):
         except:
             self.fail("Could not Create Object")
 
+
+
+    def test_readconfig(self):
+        a = ConfigParse()
         try:
             a,b,c = a.config_read()
         except:
@@ -17,6 +21,14 @@ class TestConfigParse(unittest.TestCase):
         self.assertNotEquals(b,"")
         self.assertNotEquals(c,"")
 
+    def test_write_test(self):
+        a = ConfigParse()
+        try:
+            a.config_write("127.0.0.1")
+        except:
+            self.fail("Could not write Config")
+        self.assertNotEquals(a.uname, "")
+        self.assertNotEquals(a.mac, "")
 
 
 
