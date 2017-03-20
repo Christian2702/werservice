@@ -12,14 +12,18 @@ class ConfigParse(object):
 
     def config_read(self):
 
-        parser = SafeConfigParser()
-        parser.read('config.ini')
+        try:
+            parser = SafeConfigParser()
+            parser.read('config.ini')
+            self.server = parser.get('config', 'server')
+            self.uname = parser.get('config', 'uname')
+            self.mac = parser.get('config', 'mac')
 
-        self.server = parser.get('config', 'server')
-        self.uname = parser.get('config', 'uname')
-        self.mac = parser.get('config', 'mac')
 
-        return self.server,self.uname,self.mac
+        except:
+            print "Could not Open Config"
+
+        return self.server, self.uname, self.mac
 
     def config_write(self,server):
 
@@ -37,10 +41,4 @@ class ConfigParse(object):
         config.writelines("server="+str(server)+"\n")
         config.writelines("uname="+str(self.uname)+"\n")
         config.writelines("mac="+str(self.mac)+"\n")
-"""
-#test
-a = ConfigParse()
-a.config_write("127.0.0.1")
-x,b,c = a.config_read()
-print x,b,c
-"""
+
