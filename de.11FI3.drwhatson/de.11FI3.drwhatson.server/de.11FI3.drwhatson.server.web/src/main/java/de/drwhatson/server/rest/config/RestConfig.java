@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import de.drwhatson.server.rest.controller.ReportController;
 
 @Configuration
-public class Config {
+public class RestConfig {
 
 	@Bean
 	public ReportController reportController() {
