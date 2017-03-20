@@ -48,9 +48,21 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+	</dependencies>
 	<modules>
 		<module>de.11FI3.drwhatson.server.main</module>
-		<module>de.11FI3.drwhatson.server.rest</module>
+		<module>de.11FI3.drwhatson.server.web</module>
 		<module>de.11FI3.drwhatson.server.dao</module>
 		<module>de.11FI3.drwhatson.server.business</module>
 		<module>de.11FI3.drwhatson.server.api</module>
