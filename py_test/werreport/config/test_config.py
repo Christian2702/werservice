@@ -13,11 +13,11 @@ class TestConfigParse(unittest.TestCase):
     def test_readconfig(self):
         a = ConfigParse()
         try:
-            a,b,c = a.config_read()
+            x,b,c = a.config_read()
         except:
             self.fail("Could not find file or missing head")
 
-        self.assertNotEquals(a,"")
+        self.assertNotEquals(x,"")
         self.assertNotEquals(b,"")
         self.assertNotEquals(c,"")
 
