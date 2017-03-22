@@ -1,13 +1,14 @@
 package de.drwhatson.server.api;
 
-public class Report {
+public class ReportRequest {
 
 	private String appName;
 	private String appPath;
 	private String userName;
 	private String macAddress;
-	private String reportType;
-	private Long timestamp;
+	private int reportType;
+	private String bucketId;
+	private Long eventTime;
 	
 	public String getAppName() {
 		return appName;
@@ -33,17 +34,17 @@ public class Report {
 	public void setMacAddress(String macAddress) {
 		this.macAddress = macAddress;
 	}
-	public String getReportType() {
+	public int getReportType() {
 		return reportType;
 	}
-	public void setReportType(String reportType) {
+	public void setReportType(int reportType) {
 		this.reportType = reportType;
 	}
 	public Long getTimestamp() {
-		return timestamp;
+		return eventTime;
 	}
 	public void setTimestamp(Long timestamp) {
-		this.timestamp = timestamp;
+		this.eventTime = timestamp;
 	}
 
 }

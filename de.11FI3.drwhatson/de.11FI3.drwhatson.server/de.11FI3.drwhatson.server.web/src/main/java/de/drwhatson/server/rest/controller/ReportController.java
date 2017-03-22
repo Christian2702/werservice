@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import de.drwhatson.server.api.Report;
+import de.drwhatson.server.api.ReportRequest;
 
 @RequestMapping("rest/report")
 public class ReportController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseStatus(value=HttpStatus.ACCEPTED)
-	public void post(@RequestBody List<Report> report){
+	public void post(@RequestBody List<ReportRequest> report){
 		
 	}
 	
