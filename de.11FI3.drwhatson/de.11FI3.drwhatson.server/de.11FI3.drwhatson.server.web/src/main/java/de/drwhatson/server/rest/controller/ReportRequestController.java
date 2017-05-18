@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import de.drwhatson.server.api.ReportRequest;
 
 @RequestMapping("rest/report")
-public class ReportController {
+public class ReportRequestController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	@ResponseStatus(value=HttpStatus.ACCEPTED)

@@ -3,14 +3,14 @@ package de.drwhatson.server.rest.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import de.drwhatson.server.rest.controller.ReportController;
+import de.drwhatson.server.rest.controller.ReportRequestController;
 
 @Configuration
 public class RestConfig {
 
 	@Bean
-	public ReportController reportController() {
-		return new ReportController();
+	public ReportRequestController reportController() {
+		return new ReportRequestController();
 	}
 	
 }
