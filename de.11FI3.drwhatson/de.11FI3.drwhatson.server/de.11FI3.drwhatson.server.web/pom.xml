@@ -19,7 +19,7 @@
 		</dependency>
 		<dependency>
 			<groupId>de.11FI3.drwhatson.server</groupId>
-			<artifactId>de.11FI3.drwhatson.server.api</artifactId>
+			<artifactId>de.11FI3.drwhatson.server.business</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
 		<dependency>
