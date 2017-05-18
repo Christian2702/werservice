@@ -6,4 +6,5 @@ import de.drwhatson.server.api.domain.Client;
 
 public interface ClientRepository extends JpaRepository<Client, Long> {
 
+	Client findByMacAddress(String macAddress);
 }
