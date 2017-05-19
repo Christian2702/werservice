@@ -21,12 +21,12 @@ public class UserRepositoryTest {
 	@Test
 	public void testSave(){
 		User userToSave = new User();
-		userToSave.setUserName("test");
+		userToSave.setUsername("test");
 		
 		User savedUser = userRepository.save(userToSave);
 		
 		Assert.assertNotNull("id shouldn't be null", savedUser.getId());
-		Assert.assertEquals("name dousent match",  "test", savedUser.getUserName());
+		Assert.assertEquals("name dousent match",  "test", savedUser.getUsername());
 	}
 
 }

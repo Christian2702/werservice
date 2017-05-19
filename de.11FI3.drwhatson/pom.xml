@@ -13,7 +13,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 	</properties>
-	
+
 	<scm>
 		<connection>scm:git:https://github.com/Christian2702/werservice.git</connection>
 		<developerConnection>scm:git:https://github.com/Christian2702/werservice.git</developerConnection>
@@ -27,6 +27,13 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<configuration>
 						<reuseForks>false</reuseForks>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -59,6 +66,25 @@
 						<execution>
 							<goals>
 								<goal>test-jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.jacoco</groupId>
+					<artifactId>jacoco-maven-plugin</artifactId>
+					<version>0.7.9</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>prepare-agent</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>report</id>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>report</goal>
 							</goals>
 						</execution>
 					</executions>
