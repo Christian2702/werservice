@@ -1,0 +1,29 @@
+appname(string)
+apppath(string)
+username(string)
+macadress(string)
+reporttype(int)
+bucketid(string)
+eventtime(long)
+
+
+
+
+Service API Dokumentation:
+
+Endpoint: rest/report
+Method: POST
+
+Body (Example):
+
+[
+   {
+      appName: string,
+      appPath: string,
+      userName: string,
+      macAddress: string,
+      eventType: number,
+      bucketId: string,
+      eventTime: number
+   }
+]

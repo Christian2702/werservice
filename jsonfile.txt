@@ -1,7 +1,0 @@
-appname(string)
-apppath(string)
-username(string)
-macadress(string)
-reporttype(int)
-bucketid(string)
-eventtime(long)
