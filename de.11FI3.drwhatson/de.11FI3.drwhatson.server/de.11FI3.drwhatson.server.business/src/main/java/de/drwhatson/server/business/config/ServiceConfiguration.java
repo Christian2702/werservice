@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import de.drwhatson.server.business.service.ApplicationService;
 import de.drwhatson.server.business.service.ClientService;
+import de.drwhatson.server.business.service.ReportRequestService;
 import de.drwhatson.server.business.service.ReportRequestToReportConverterService;
 import de.drwhatson.server.business.service.ReportService;
 import de.drwhatson.server.business.service.UserService;
@@ -30,6 +31,11 @@ public class ServiceConfiguration {
 	@Bean
 	public UserService userService() {
 		return new UserService();
+	}
+	
+	@Bean
+	public ReportRequestService reportRequestService(){
+		return new ReportRequestService();
 	}
 
 	@Bean
