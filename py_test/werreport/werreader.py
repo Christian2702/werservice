@@ -47,11 +47,10 @@ class werreader(object):
 
         self.AppName = parser.get("wer", "AppName")
         self.AppPath = parser.get("wer", "AppPath")
-
         self.version = parser.get("wer","Version")
         self.EventType = parser.get("wer","EventType")
         self.EventTime = parser.get("wer","EventTime")
-        self.ReportIdentifier = parser.get("wer","ReportIdentifier")
+        #self.ReportIdentifier = parser.get("wer","ReportIdentifier")
         self.Bucketid = parser.get("wer","Response.BucketId")
 
         self.EventTime = float(self.EventTime)
@@ -64,6 +63,17 @@ os.system("dir C:\ProgramData\Microsoft\Windows\WER\ReportQueue\ /b *.wer /s /A-
 
 out = open("out.txt", "w")
 jout = open("json.txt","w")
+
+
+#get IP and Port for REST Connection
+
+opt = SafeConfigParser()
+opt.read("config.ini")
+ip = opt.get("config","server")
+port = opt.get("config","port")
+
+
+
 
 a = werreader()
 #x = a.read("C:\ProgramData\Microsoft\Windows\WER\ReportQueue\AppCrash_AD2F1837.HPPrint_7abab9a238d31ce95943fa32488e7ff1e0ef441f_8eaf7b11_2e13e4ac\Report.wer")
@@ -79,10 +89,10 @@ with open('Reports.txt') as fp:
             jout.write(str(jsonfile+"\n"))
             out.write(str(x)+"\n")
 
-
             #Send JSON
-            url = "http://"+ip+":"+port+"/rest/report/"
+            #url = "http://"+ip+":"+port+"/rest/report"
+            #response = requests.post(url, data=jsonfile)
         except:
-            "EOF"
+            "No Report found"
 
 
