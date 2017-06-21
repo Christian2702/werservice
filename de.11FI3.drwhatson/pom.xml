@@ -94,7 +94,6 @@
 	</build>
 
 	<modules>
-		<module>de.11FI3.drwhatson.client</module>
 		<module>de.11FI3.drwhatson.server</module>
 	</modules>
 

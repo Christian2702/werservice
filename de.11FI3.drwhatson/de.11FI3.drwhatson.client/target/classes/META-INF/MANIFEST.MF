@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: de.11FI3.drwhatson.client
-Implementation-Version: 
-Built-By: Chrissi
-Implementation-Vendor-Id: de.11FI3.drwhatson.client
-Build-Jdk: 1.8.0_121
-Created-By: Maven Integration for Eclipse
-

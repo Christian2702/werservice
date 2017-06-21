@@ -66,5 +66,6 @@
 		<module>de.11FI3.drwhatson.server.dao</module>
 		<module>de.11FI3.drwhatson.server.business</module>
 		<module>de.11FI3.drwhatson.server.api</module>
+		<module>de.11FI3.drwhatson.server.webclient</module>
 	</modules>
 </project>
