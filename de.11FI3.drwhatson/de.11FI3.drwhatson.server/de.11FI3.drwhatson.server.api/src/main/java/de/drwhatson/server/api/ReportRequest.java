@@ -7,7 +7,8 @@ public class ReportRequest {
 	private String appVersion;
 	private String userName;
 	private String macAddress;
-	private int eventType;
+	private String eventType;
+
 	private String bucketId;
 	private Long eventTime;
 
@@ -17,6 +18,14 @@ public class ReportRequest {
 
 	public void setAppName(String appName) {
 		this.appName = appName;
+	}
+
+	public String getEventType() {
+		return eventType;
+	}
+
+	public void setEventType(String eventType) {
+		this.eventType = eventType;
 	}
 
 	public String getAppPath() {
@@ -49,14 +58,6 @@ public class ReportRequest {
 
 	public void setBucketId(String bucketId) {
 		this.bucketId = bucketId;
-	}
-
-	public int getEventType() {
-		return eventType;
-	}
-
-	public void setEventType(int eventType) {
-		this.eventType = eventType;
 	}
 
 	public String getAppVersion() {

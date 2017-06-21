@@ -2,6 +2,7 @@ package de.drwhatson.server.api.domain;
 
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,14 +15,14 @@ public class Report {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	private Client client;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	private User user;
-	@ManyToOne
+	@ManyToOne(cascade=CascadeType.ALL)
 	private Application application;
 	
-	private int reportType;
+	private String reportType;
 
 	private String bucketId;
 
@@ -59,11 +60,11 @@ public class Report {
 		this.application = application;
 	}
 
-	public int getReportType() {
+	public String getReportType() {
 		return reportType;
 	}
 
-	public void setReportType(int reportType) {
+	public void setReportType(String reportType) {
 		this.reportType = reportType;
 	}
 
@@ -114,7 +115,7 @@ public class Report {
 		result = prime * result + ((client == null) ? 0 : client.hashCode());
 		result = prime * result + ((eventTime == null) ? 0 : eventTime.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + reportType;
+		result = prime * result + ((reportType == null) ? 0 : reportType.hashCode());
 		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
 	}
@@ -163,7 +164,10 @@ public class Report {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (reportType != other.reportType)
+		if (reportType == null) {
+			if (other.reportType != null)
+				return false;
+		} else if (!reportType.equals(other.reportType))
 			return false;
 		if (user == null) {
 			if (other.user != null)
@@ -180,7 +184,7 @@ public class Report {
 				+ ", appDestination=" + appDestination + ", eventTime=" + eventTime + "]";
 	}
 
-	public static Report create(Long id, Client client, User user, Application application, String bucketId, int eventType,
+	public static Report create(Long id, Client client, User user, Application application, String bucketId, String reportType,
 			String applicationVersion, String appDestination, Date eventTime) {
 		Report report = new Report();
 		report.setId(id);
@@ -188,16 +192,17 @@ public class Report {
 		report.setUser(user);
 		report.setApplication(application);
 		report.setBucketId(bucketId);
+		report.setReportType(reportType);
 		report.setApplicationVersion(applicationVersion);
 		report.setAppDestination(appDestination);
 		report.setEventTime(eventTime);
 		return report;
 	}
 
-	public static Report create(Client client, User user, Application application, String bucketId, int eventType,
+	public static Report create(Client client, User user, Application application, String bucketId, String reportType,
 			String applicationVersion, String appDestination, Date eventTime) {
 
-		return create(null, client, user, application, bucketId, eventType, applicationVersion, appDestination, eventTime);
+		return create(null, client, user, application, bucketId, reportType, applicationVersion, appDestination, eventTime);
 	}
 
 }

@@ -1,15 +1,14 @@
 package de.drwhatson.server.web.config;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import de.drwhatson.server.web.controller.HomeController;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-public class WebConfig {
-
-	@Bean
-	public HomeController homeController(){
-		return new HomeController();
+public class WebConfig extends WebMvcConfigurerAdapter{
+	
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("app/**").addResourceLocations("classpath:/app/");
 	}
 }
